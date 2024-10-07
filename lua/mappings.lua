@@ -1,10 +1,28 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
+map("i", "jj", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <crmap("n", "<leader>cp", function()
+
+-- copilot chat
+map("n", "<leader>ccq", function()
+  local input = vim.fn.input "Quick Chat: "
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end, { desc = "CopilotChat - Quick chat" })
+
+map("n", "<leader>ccp", function()
+  local actions = require "CopilotChat.actions"
+  require("CopilotChat.integrations.telescope").pick(actions.prompt_actions())
+end, { desc = "CopilotChat - Prompt actions" })
+
+map("n", "<leader>cch", function()
+  local actions = require "CopilotChat.actions"
+  require("CopilotChat.integrations.telescope").pick(actions.help_actions())
+end, { desc = "CopilotChat - Help actions" })
+
