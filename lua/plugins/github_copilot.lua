@@ -117,13 +117,14 @@ local configs = {
 		cmd = "Copilot",
 		-- Activate on insert enter
 		event = "InsertEnter",
-        config = function()
-      require("copilot").setup {
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      }
-    end,
+		config = function()
+			require("copilot").setup({
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
+		end,
 	},
+
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		branch = "canary",

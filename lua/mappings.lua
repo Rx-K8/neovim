@@ -6,8 +6,6 @@ local map = vim.keymap.set
 
 map("i", "jj", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <crmap("n", "<leader>cp", function()
-
 -- copilot chat
 map("n", "<leader>ccq", function()
 	local input = vim.fn.input("Quick Chat: ")
