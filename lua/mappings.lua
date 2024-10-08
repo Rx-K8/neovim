@@ -1,7 +1,5 @@
 require("nvchad.mappings")
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("i", "jj", "<ESC>")
@@ -24,3 +22,17 @@ map("n", "<leader>cch", function()
 	local actions = require("CopilotChat.actions")
 	require("CopilotChat.integrations.telescope").pick(actions.help_actions())
 end, { desc = "CopilotChat - Help actions" })
+
+-- Debug
+map("n", "<leader>dpr", function()
+	require("dap-python").test_method()
+end, { desc = "Run test method" })
+
+map("n", "<leader>dl", function()
+	require("dapui").toggle()
+end, { desc = "Debug launch" })
+
+map("n", "<F5>", ":DapContinue<CR>", { desc = "Debug continue" })
+map('n', '<F10>', ':DapStepOver<CR>', { desc = 'Debug step over' })
+map('n', '<F11>', ':DapStepInto<CR>', {desc = 'Debug step into'})
+map('n', '<F12>', ':DapStepOut<CR>', {desc = 'Debug step out'})
