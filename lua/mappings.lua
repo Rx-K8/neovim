@@ -5,6 +5,7 @@ require("nvchad.mappings")
 local map = vim.keymap.set
 
 map("i", "jj", "<ESC>")
+map("n", "x", '"_x')
 
 -- copilot chat
 map("n", "<leader>ccq", function()
