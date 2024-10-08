@@ -5,6 +5,9 @@ local map = vim.keymap.set
 map("i", "jj", "<ESC>")
 map("n", "x", '"_x')
 
+-- lazygit
+map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
+
 -- copilot chat
 map("n", "<leader>ccq", function()
 	local input = vim.fn.input("Quick Chat: ")
@@ -32,7 +35,17 @@ map("n", "<leader>dl", function()
 	require("dapui").toggle()
 end, { desc = "Debug launch" })
 
+map("n", "<leader>db", ":DapToggleBreakpoint <CR>", { desc = "Breakpoint" })
 map("n", "<F5>", ":DapContinue<CR>", { desc = "Debug continue" })
-map('n', '<F10>', ':DapStepOver<CR>', { desc = 'Debug step over' })
-map('n', '<F11>', ':DapStepInto<CR>', {desc = 'Debug step into'})
-map('n', '<F12>', ':DapStepOut<CR>', {desc = 'Debug step out'})
+map("n", "<F10>", ":DapStepOver<CR>", { desc = "Debug step over" })
+map("n", "<F11>", ":DapStepInto<CR>", { desc = "Debug step into" })
+map("n", "<F12>", ":DapStepOut<CR>", { desc = "Debug step out" })
+
+-- flash
+map({ "n", "x", "o" }, "<leader>s", function()
+	require("flash").jump()
+end, { desc = "Flash" })
+
+map({ "n", "x", "o" }, "<leader>S", function()
+	require("flash").treesitter()
+end, { desc = "Flash Treesitter" })

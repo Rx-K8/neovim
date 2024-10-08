@@ -19,9 +19,6 @@ return {
 	},
 	{
 		"mfussenegger/nvim-dap",
-		keys = {
-			{ "<leader>db", mode = { "n" }, ":DapToggleBreakpoint <CR>", desc = "Breakpoint" },
-		},
 	},
 	{
 		"mfussenegger/nvim-dap-python",
