@@ -3,7 +3,7 @@ return {
 	opts = {
 		filters = {
 			git_ignored = true,
-			-- custom = { "^\\.git" },
+			custom = { "^\\.git" },
 		},
 	},
 }
