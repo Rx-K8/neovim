@@ -4,6 +4,10 @@ local map = vim.keymap.set
 
 map("i", "jj", "<ESC>")
 map("n", "x", '"_x')
+map("n", "X", '"_X')
+map("n", "dc", '"_d')
+map("n", "Dc", '"_D')
+
 
 -- lazygit
 map("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
