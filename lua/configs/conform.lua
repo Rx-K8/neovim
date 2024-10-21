@@ -10,7 +10,7 @@ local options = {
 			prepend_args = {
 				"--fast",
 				"--line-length",
-				"80",
+				"79",
 			},
 		},
 		isort = {
