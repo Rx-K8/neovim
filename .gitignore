@@ -1,0 +1,30 @@
+# Plugin directory (managed by lazy.nvim)
+.lazy/
+
+# Claude Code local settings
+.claude/
+
+# Local config
+.neoconf.json
+
+# Spell files
+spell/
+
+# Session files
+session/
+
+# Undo history
+undo/
+
+# Swap files
+swap/
+
+# Backup files
+backup/
+
+# Log files
+*.log
+
+# Mason packages (installed separately)
+# Uncomment if you don't want to track mason
+# mason/
