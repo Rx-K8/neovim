@@ -3,6 +3,9 @@
 ---@type LazySpec
 return {
   "akinsho/toggleterm.nvim",
+  opts = {
+    shell = "/bin/bash",
+  },
   keys = {
     -- Option + j: 下にターミナル（水平分割）
     { "<M-j>", "<Cmd>ToggleTerm direction=horizontal<CR>", mode = { "n", "t" }, desc = "Toggle terminal (horizontal)" },
