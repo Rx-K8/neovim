@@ -11,6 +11,9 @@ return {
       split_width_percentage = 0.40,
       provider = "snacks",
     },
+    diff_opts = {
+      open_in_current_tab = false,
+    },
   },
   keys = {
     { "<Leader>a", nil, desc = "AI/Claude Code" },
